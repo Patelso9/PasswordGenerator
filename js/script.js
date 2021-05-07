@@ -1,59 +1,59 @@
-// special char array
-var specialChars = ["#", "!", "@"];
-
-// number array
-var numbArray= ["1", "2"];
-
-// lower case array
-var lowerCase= ["a", "b"];
-
-// uppercase array- .split is not working?
-var upperCase= ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'].split('');
+// ref all characters
+var specialChars = ["!", "@", "#", "$", "%", "&"];
+var numbArray= '0123456789'.split(' ');
+var lowerCase= 'abcdefghijklmnopqrstuvwxyz'.split(' ');
+var upperCase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(' ');
 
 // funct to prompt user for password options
 function getPassword(){
   // create var to store length of password
   var length = parseInt (
-    prompt("How many characters would you like your password to be")
+    prompt("How many characters would you like your password to be? \nMust be atlest 8 characters long")
   );
 
-  // create conditional statement to check if password length is a num
+    // create conditional statement to check if password length is a num
   if(Number.isNaN(length)) {
     alert("password must be a number")
     return null;
   };
 
-  // cond state to check if pswd is atleast 8 char
+    // cond state to check if pswd is atleast 8 char
   if (length < 8) {
     alert("password length must be atleast 8 characters")
     return null;
   };
   
-  // conditional statement to check if pswd length is atleas 128 characters
+    // conditional statement to check if pswd length is atleas 128 characters
   if (length > 128) {
     alert("password can not contain more than 128 characters")
     return null;
   };
   // create confirmation prompts for types of characters the user wants to use
-
+  specialChars = window.confirm("Do you want special characters?");
+  numbArray = window.confirm("Do you want numbers?");
+  lowerCase = window.confirm("Do you want lowercase leters?");
+  upperCase = window.confirm("Do you want upper case letters?");
   // create conditional statement to ensure user clicks one of the character types
+  
+
 
   // create an object to store user input
     var possiblePass = {
       // store lenth & all characters selected by user
-      length: length, 
-      specialChars: specialChars,
-      numbArray: numbArray,
-      lowerCase: lowerCase,
-      upperCase: upperCase,
+      length: length.length, 
+      specialChars: specialChars.length,
+      numbArray: numbArray.length,
+      lowerCase: lowerCase.length,
+      upperCase: upperCase.length,
     }
 
     return possiblePass;
+
 }
 
 // create function for getting random element from array
   function getRandomLetters(arr) {
-    var random =     //come kind of math problem arr.length
+    var random = possiblePass.arr(Math.floor(math.random() * possiblePass.length));    //some kind of math problem arr.length
     // save to a variable (r,p,s)
     var rand = arr[random]   // future research: get 1 of each character, no repeats
 
@@ -61,7 +61,7 @@ function getPassword(){
   }
 
 // create fuction to generate passwork w. user input
-function generatingPassword() {
+function generatePassword() {
   // set a variable to call my getPassword function
   var options = getPassword();
 
@@ -106,4 +106,4 @@ function generatePassword() {
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", getPassword);
