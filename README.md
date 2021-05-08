@@ -1,77 +1,57 @@
 # PasswordGenerator
 
-03 JavaScript: Password Generator
+Password generator created in Javascript
 
-Your Task
-    This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+## Contects of project
 
-    The password can include special characters. If you’re unfamiliar with these, see this list of password special characters from the OWASP Foundation.
+This project contains an index.html file, script.js file, and style.css file. To preview the project, click the link next to the description.
 
-User Story
-    AS AN employee with access to sensitive data
-    I WANT to randomly generate a password that meets certain criteria
-    SO THAT I can create a strong password that provides greater security
+## Links
 
-Acceptance Criteria
-    GIVEN I need a new, secure password
-    WHEN I click the button to generate a password
-    THEN I am presented with a series of prompts for password criteria
-    WHEN prompted for password criteria
-    THEN I select which criteria to include in the password
-    WHEN prompted for the length of the password
-    THEN I choose a length of at least 8 characters and no more than 128 characters
-    WHEN prompted for character types to include in the password
-    THEN I choose lowercase, uppercase, numeric, and/or special characters
-    WHEN I answer each prompt
-    THEN my input should be validated and at least one character type should be selected
-    WHEN all prompts are answered
-    THEN a password is generated that matches the selected criteria
-    WHEN the password is generated
-    THEN the password is either displayed in an alert or written to the page
+Git URL: https://patelso9.github.io/PasswordGenerator/
 
-Mock-Up
-    The following image shows the web application's appearance and functionality:
-    The Password Generator application displays a red button to "Generate Password".
+Git Repository: https://github.com/Patelso9/PasswordGenerator
 
-Grading Requirements
-This homework is graded based on the following criteria:
+## User Story 
 
-    Technical Acceptance Criteria: 40%
-    Satisfies all of the preceding acceptance criteria plus the following:
+AS AN employee with access to sensitive data I WANT to randomly generate a password that meets certain criteria SO THAT I can create a strong password that provides greater security
 
-    The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-    Deployment: 32%
-    Application deployed at live URL.
+## Acceptance Criteria 
 
-    Application loads with no errors.
+GIVEN I need a new, secure password 
+WHEN I click the button to generate a password 
+THEN I am presented with a series of prompts for password criteria 
+WHEN prompted for password criteria 
+THEN I select which criteria to include in the password 
+WHEN prompted for the length of the password 
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN prompted for character types to include in the password 
+THEN I choose lowercase, uppercase, numeric, and/or special characters 
+WHEN I answer each prompt 
+THEN my input should be validated and at least one character type should be selected 
+WHEN all prompts are answered 
+THEN a password is generated that matches the selected criteria 
+WHEN the password is generated 
+THEN the password is either displayed in an alert or written to the page
 
-    Application GitHub URL submitted.
+## Satisfying the Acceptance Criteria
 
-    GitHub repository that contains application code.
+When clicking the button generated in HTML, it will trigger pop up windows to generate a password.
 
-    Application Quality: 15%
-    Application user experience is intuitive and easy to navigate.
+A series of prompts are generated to select number of characters and what kind of characters will be included in the password. 
 
-    Application user interface style is clean and polished.
+If no number, or a number larger than 128 / smaller than 8 characters was selected for the 1st prompt, a prompt will ask the user to input another number within the criteria. 
 
-    Application resembles the mock-up functionality provided in the homework instructions.
+If no characters were confirmed, the user will be prompted again to select types of characters. 
 
-    Repository Quality: 13%
-    Repository has a unique name.
+4 character arrays were created to include: special characters, numbers, uppercase letters, and lowercase letters. 
 
-    Repository follows best practices for file structure and naming conventions.
+A loop is run for length of password to generate 2 random numbers. The 1st random number chooses character a character in the array and the 2nd random number chooses a character from that selected array. The selection is then concatenated into a password string. 
 
-    Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+The password string is then printed into the HTML box. 
 
-    Repository contains multiple descriptive commit messages.
 
-    Repository contains quality readme file with description, screenshot, and link to deployed application.
+## Future Developments
 
-Review
-    You are required to submit the following for review:
-
-    The URL of the deployed application.
-
-    The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Style can be updated to be more inviting. 
+Another button can be created to to add or coppy contects onto a clipboard. 
